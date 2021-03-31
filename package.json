@@ -2,9 +2,9 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "Mehmet",
+  "name": "mehmet",
   "version": "0.0.1",
-  "description": "Mehmet",
+  "description": "mehmet",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -12,8 +12,11 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "discord.js": "^12.5.1",
+    "express": "^4.17.1",
     "fs": "^0.0.2",
-    "moment": "^2.29.1"
+    "jimp": "^0.16.1",
+    "moment": "^2.29.1",
+    "quick.db": "^7.1.2"
   },
   "engines": {
     "node": "14.x"
