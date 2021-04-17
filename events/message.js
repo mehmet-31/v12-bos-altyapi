@@ -17,10 +17,6 @@ module.exports = async message => {
     cmd = client.commands.get(client.aliases.get(command));
   }
   if (cmd) {
- let bakım = db.fetch('botbakim');
- if(message.author.id !== ayarlar.sahip) {
- if(bakım) return message.reply(`**${bakım}**`)//Bot şu anda ${bakım} nedeni ile bakımdadır!
-  }
     if (perms < cmd.conf.permLevel) return;
     cmd.run(client, message, params, perms);
   }
