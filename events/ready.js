@@ -4,14 +4,10 @@ const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
 
 module.exports = client => {
+  client.user.setActivity(`${client.user.username}`);
   console.log(
-    `[${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: Aktif, Komutlar Yüklendi!`
-  );
-  console.log(
-    `[${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: ${
+    `[${moment().format("DD-MM-YYYY HH:mm:ss")}] BOT: ${
       client.user.username
-    } İsmi ile Sisteme Giriş Yapıldı!`
+    } Başarıyla Aktif Edildi!`
   );
-  client.user.setStatus("online");
-  client.user.setActivity("DURUM");
 };
