@@ -1,10 +1,7 @@
 {
-  "name": "mehmet",
-  "version": "0.0.1",
-  "description": "mehmet",
-  "main": "bot.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
