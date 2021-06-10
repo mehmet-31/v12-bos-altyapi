@@ -98,12 +98,4 @@ client.elevation = message => {
   return permlvl;
 };
 
-client.on("warn", e => {
-  console.log(chalk.bgYellow(e.replace(regToken, "that was redacted")));
-});
-
-client.on("error", e => {
-  console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
-});
-
 client.login(ayarlar.token);
