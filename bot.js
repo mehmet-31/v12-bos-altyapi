@@ -8,10 +8,6 @@ const Jimp = require("jimp");
 const db = require("quick.db");
 var prefix = ayarlar.prefix;
 
-client.on("ready", () => {
-  console.log(`Bot, ${client.user.tag} ismi ile giriş yaptı!`);
-});
-
 const log = message => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
 };
@@ -101,11 +97,6 @@ client.elevation = message => {
   if (ayarlar.sahip.includes(message.author.id)) permlvl = 4;
   return permlvl;
 };
-
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-// client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
 
 client.on("warn", e => {
   console.log(chalk.bgYellow(e.replace(regToken, "that was redacted")));
