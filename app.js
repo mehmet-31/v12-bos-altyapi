@@ -7,6 +7,7 @@ const moment = require("moment");
 const Jimp = require("jimp");
 const db = require("quick.db");
 var prefix = ayarlar.prefix;
+require("./util/eventLoader")(client);
 
 const log = message => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
@@ -17,10 +18,6 @@ const log = message => {
 
 ////////////// SON
 ////////////// ÖNEMLİ BURASI SİLME
-require("./util/eventLoader")(client);
-
-client.login(ayarlar.token);
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir("./komutlar/", (err, files) => {
